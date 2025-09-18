@@ -21,6 +21,7 @@ function createToDoItem(itemText) {
     p.textContent = itemText;
     // creamos el ultimo nodo hijo, el botón de eliminar
     const buttonDelete = document.createElement('button');
+    buttonDelete.classList.add('button_delete')
     buttonDelete.innerHTML = '<i class="fa-solid fa-xmark"></i>';
 
     // ensamblamos dentro del nodo padre sus nodos hijos ya previamente creados, es decir la estructura de cada tarea(item)
@@ -31,4 +32,33 @@ function createToDoItem(itemText) {
     return itemToDo;
 }
 
-addBtn.addEventListener('click', createToDoItem)
+addBtn.addEventListener('click', () => {
+    const itemText = input.value.trim()
+    if (itemText == '') {
+        alert('No se puede crear una tarea vacia estúpido, intente nuevamente sapo')
+    } else {
+        const newItem = createToDoItem(itemText);
+        toDoList.appendChild(newItem)
+        eventsToItem(newItem)
+        input.value = '';
+    }
+});
+
+// la siguiente funcion nos permitirá agregar el funcionamiento principal sobre las tareas, es decir marcar la tarea como completada o eliminarla
+function eventsToItem(itemToDo) {
+    // usamos querySelector para capturar el input o button que estan dentro del item, capturamos uno que es el checkbox y el otro que es el boton de eliminar
+    const checkbox = itemToDo.querySelector('input');
+    const btnDelete = itemToDo.querySelector('.button_delete');
+
+    // marcar como completada la tarea
+    checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+            completedItems.appendChild(itemToDo)
+        } else {
+            toDoList.appendChild(itemToDo)
+        }
+    })
+    btnDelete.addEventListener('click', () => {
+        itemToDo.remove()
+    })
+}
