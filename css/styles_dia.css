@@ -10,7 +10,7 @@
 
 /* Fondo general */
 body {
-    background: linear-gradient(135deg, #161616, #1a1a1a);
+    background: linear-gradient(135deg, #ffffff, #8b8b8b);
     color: #ffffff;
     display: flex;
     justify-content: center;

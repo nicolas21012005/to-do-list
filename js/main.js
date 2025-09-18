@@ -62,3 +62,16 @@ function eventsToItem(itemToDo) {
         itemToDo.remove()
     })
 }
+const btnTheme = document.getElementById('change-theme');
+btnTheme.addEventListener('click', () => {
+    const cssDay = document.getElementById('link-styles');
+    if (cssDay.getAttribute('href') === 'css/styles.css') {
+        cssDay.setAttribute('href', 'css/styles_dia.css')
+        btnTheme.textContent = 'Modo noche'
+    } else {
+
+        cssDay.setAttribute('href', 'css/styles.css')
+        btnTheme.textContent = 'Modo dia'
+
+    }
+})
