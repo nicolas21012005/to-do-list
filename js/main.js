@@ -69,9 +69,14 @@ btnTheme.addEventListener('click', () => {
         cssDay.setAttribute('href', 'css/styles_dia.css')
         btnTheme.textContent = 'Modo noche'
     } else {
-
         cssDay.setAttribute('href', 'css/styles.css')
         btnTheme.textContent = 'Modo dia'
+    }
+})
 
+input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        addBtn.click();
     }
 })
