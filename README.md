@@ -1,15 +1,15 @@
-📚 ActividadPracticaLocalStorage
+✅ TO-do-list
 
-Este proyecto forma parte de una práctica de manipulación del DOM y uso de LocalStorage en JavaScript. Sirve para registrar nuevos cursos, almacenarlos en el navegador y migrar esa información a otra vista donde se muestran en una tabla.
+Este proyecto es una aplicación web sencilla que permite crear, editar, eliminar y marcar como completadas tareas. Se centra en la práctica de manipulación del DOM con JavaScript puro.
 
 🚀 Descripción del Proyecto
 
-El objetivo principal es crear una aplicación sencilla donde el usuario pueda registrar cursos con información detallada (nombre, profesor, precio, ciudad y cupo). Toda la información se guarda en LocalStorage, lo que permite mantener los datos aún después de cerrar la página.
+El objetivo de esta aplicación es gestionar tareas simples de manera interactiva. El usuario puede añadir nuevas tareas, marcarlas como completadas o eliminarlas. Además, incluye un cambio de tema (día/noche) para personalizar la interfaz.
 
 🌐 Link al Proyecto
 
-Puedes ver el proyecto desplegado aquí:
-👉 ActividadPracticaLocalStorage en GitHub Pages
+Puedes probar la aplicación aquí:
+👉 TO-do-list en GitHub Pages https://nicolas21012005.github.io/to-do-list/
 
 🛠️ Tecnologías Utilizadas
 
@@ -17,26 +17,31 @@ HTML5
 
 CSS3
 
-Bootstrap
-
-JavaScript (LocalStorage + DOM)
+JavaScript
 
 📋 Funciones Principales
 
-Registrar un curso con datos detallados.
+Crear nuevas tareas desde un formulario.
 
-Guardar automáticamente los cursos en LocalStorage.
+Marcar tareas como completadas (se mueven a otra sección).
 
-Mostrar los datos guardados en pantalla al cargar la página.
+Eliminar tareas individuales.
 
-Eliminar un curso registrado desde LocalStorage.
+Evitar creación de tareas vacías con validación.
+
+Atajo con la tecla Enter para añadir tareas.
+
+Cambio de tema entre modo día y modo noche.
+
 📂 Contenido del Repositorio
 
-index.html → estructura principal del proyecto.
+index.html → estructura base del proyecto.
 
-style.css → estilos personalizados.
+css/styles.css → estilos principales (modo noche).
 
-app.js → lógica para registrar, mostrar y eliminar cursos usando LocalStorage.
+css/styles_dia.css → estilos alternativos (modo día).
+
+app.js → lógica de creación, gestión y eliminación de tareas.
 
 🤝 Contribuciones
 
